@@ -1878,6 +1878,97 @@ section {
   }
 }
 
+/* Belt progression — mobile */
+@media (max-width: 640px) {
+  /* Scrollable pill bar instead of wrapping */
+  .belt-overview {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.875rem 1rem;
+  }
+
+  .belt-overview::-webkit-scrollbar {
+    display: none;
+  }
+
+  .belt-pill {
+    flex-shrink: 0;
+    font-size: 0.65rem;
+    padding: 0.28rem 0.6rem;
+  }
+
+  /* Hide summary badges from card headers */
+  .belt-card-right {
+    display: none;
+  }
+
+  .belt-card-header {
+    padding: 0.875rem 1rem;
+  }
+
+  .belt-card-body {
+    padding: 0 1rem;
+  }
+
+  .belt-card.open .belt-card-body {
+    padding: 0 1rem 1.25rem;
+  }
+
+  /* Convert box grid → compact label | tags rows */
+  .req-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0.875rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .req-section {
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .req-section:last-child {
+    border-bottom: none;
+  }
+
+  .req-label {
+    margin-bottom: 0;
+    font-size: 0.6rem;
+    padding-top: 0.25rem;
+    line-height: 1.3;
+  }
+
+  .req-tag {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.45rem;
+  }
+
+  .physical-requirements,
+  .additional-requirements {
+    padding: 0.75rem 1rem;
+  }
+
+  .physical-grid {
+    gap: 1rem;
+  }
+
+  .physical-value {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 2.75rem;
